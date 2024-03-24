@@ -1,0 +1,15 @@
+ALGORITHM insertionSort(arr: ARRAY) RETURNS ARRAY
+    FOR i FROM 1 TO LENGTH(arr) - 1 DO
+        key = arr[i]
+        j = i - 1
+
+        WHILE j >= 0 AND arr[j] > key DO
+            arr[j + 1] = arr[j]
+            j = j - 1
+        END WHILE
+
+        arr[j + 1] = key
+    END FOR
+
+    RETURN arr
+END ALGORITHM
